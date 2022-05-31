@@ -7,7 +7,9 @@ trigger:
 - develop
 
 pool:
-  vmImage: ubuntu-latest
+  name: sonar
+  demands:
+  - Agent.Name -equals sonar
 
 variables:
   phpVersion: 7.2
